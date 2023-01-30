@@ -1,14 +1,19 @@
 const inputs = document.querySelectorAll(".input");
 
+const isSomeEmpty = inputs === "";
+if (isSomeEmpty) {
+	window.alert("Preencha os Campos Antes de Enviar!!");
+}
 
-function addcl(){
+
+function addcl() {
 	let parent = this.parentNode.parentNode;
 	parent.classList.add("focus");
 }
 
-function remcl(){
+function remcl() {
 	let parent = this.parentNode.parentNode;
-	if(this.value == ""){
+	if (this.value == "") {
 		parent.classList.remove("focus");
 	}
 }
